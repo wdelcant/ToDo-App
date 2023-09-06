@@ -66,10 +66,11 @@ window.addEventListener("load", function () {
 
         if (data.jwt) {
           localStorage.setItem("jwt", JSON.stringify(data.jwt));
+          window.location.href = "mis-tareas.html";
         }
       })
       .catch((err) => {
-        console.warn("Promesa rechazada ");
+        console.warn("Promesa rechazada");
         console.error(err.message);
         alert(err.message);
       });
