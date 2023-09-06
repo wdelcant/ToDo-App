@@ -67,7 +67,7 @@ window.addEventListener('load', function () {
                     localStorage.setItem("jwt", JSON.stringify(data.jwt))
 
                     // redireccionamos a nuestro dashboard de todo
-                    // location.replace("./mis-tareas.html")
+                    location.replace("./mis-tareas.html")
                 }
 
             })
@@ -85,10 +85,6 @@ window.addEventListener('load', function () {
                     alert("Error del servidor | url no existe")
                 }
             })
-
-
-
     };
-
 
 });
