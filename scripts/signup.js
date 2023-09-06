@@ -13,17 +13,14 @@ window.addEventListener("load", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    //Creamos el cuerpo de la request (petición al servidor)
     const payload = {
       firstName: nombre.value,
       lastName: apellido.value,
       email: email.value,
       password: password.value,
     };
-    // vemos el objeto que recibimos del formulario
     console.log(payload);
 
-    //configuramos la request del Fetch
     const settings = {
       method: "POST",
       body: JSON.stringify(payload),
@@ -32,10 +29,8 @@ window.addEventListener("load", function () {
       },
     };
 
-    // Lanzamos la consulta del login a la API
     realizarRegister(settings);
 
-    // Limpiamos el formulario
     form.reset();
   });
 
